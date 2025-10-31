@@ -5,6 +5,8 @@
 
 ### Jose David Castillo Rodriguez
 
+olvide cuadrar las credenciales por tanto sale como unkown
+
 ## Parcial segundo corte para el cálculo de cuentas de restaurantes.
 
 ### Descripción
@@ -59,8 +61,31 @@ Por defecto, el manejador de órdenes tiene dos órdenes registradas para las me
 	
 	* Importante, para el calculo del total de cada orden debe utilizar la clase "edu.eci.arsw.myrestaurant.beans.impl.BasicBillCalculator" 
 
+Para esto se realizo el controlador
+
+![](img/controller.png)
+
+se realizo el servicio usando las funciones ya implementadas, se realizo la anotacion service en la calculadora que se necesita y se inyecto
+		
+![](img/service.png)
+
+se utilizo la creacion de una tupla para facilitar el manejo del ejercicio
+
+![](img/tuple.png)
+
+por ultimo se realizo la prueba con postman
+
+![](img/service.png)
 
 ### Bono
 
 Haga que a la aplicación se le inyecte el bean BasicBillCalculator y BillWithTaxesCalculator. Para esto utilice el principio de los Beans revisados en laboratorios anteriores y realice la inyección de dependencias entre éstos mediante las anotaciones @Autowired y @Service.
 * Nota:  Tiene que hacer que la clase "BillWithTaxesCalculator" utilice a "edu.eci.arsw.myrestaurant.beans.impl.colombia.StandardTaxesCalculator" para realizar su calculo, no es necesario que se inyecte.
+
+Para este punto se realizo el cambio de las calculadoras comentando el @service en la anterior y poniendolo en la nueva, ademas se le crea la taxescalculator.
+
+![](img/bono1.png)
+
+y se prueba que el valor es diferente con postman
+
+![](img/bono2.png)
